@@ -1,5 +1,5 @@
 import copy
-from psaw.pushshift_api_minimal import PushshiftAPIMinimal
+from pushshift_py import PushshiftAPIMinimal
 
 
 class PushshiftAPI(PushshiftAPIMinimal):
