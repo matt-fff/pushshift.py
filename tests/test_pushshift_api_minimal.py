@@ -6,7 +6,7 @@ from datetime import datetime as dt
 from requests.exceptions import HTTPError
 import pytz
 from pushshift_py import PushshiftAPIMinimal
-from pushshift_py.tests.mock_response import MockResponse
+from tests.mock_response import MockResponse
 
 # pylint: disable=too-many-public-methods
 class TestPushshiftAPIMinimal(TestCase):
@@ -257,7 +257,7 @@ class TestPushshiftAPIMinimal(TestCase):
             self.assertEqual(val, getattr(wrapped, key))
 
     # pylint: disable=no-self-use
-    @mock.patch("pushshift_py.src.pushshift_api_minimal.time.sleep")
+    @mock.patch("pushshift_py.pushshift_api_minimal.time.sleep")
     def test_impose_rate_limit(self, mock_sleep):
         mock_rlcache = mock.NonCallableMock(blocked=False, interval=13)
 
@@ -354,7 +354,7 @@ class TestPushshiftAPIMinimal(TestCase):
         )
 
     @mock.patch("pushshift_py.PushshiftAPIMinimal._impose_rate_limit")
-    @mock.patch("pushshift_py.src.pushshift_api_minimal.requests.get")
+    @mock.patch("pushshift_py.pushshift_api_minimal.requests.get")
     def test_get(self, mock_get, mock_rate_limit):
         max_retries = 7
         expected_result = "test_text"
@@ -381,7 +381,7 @@ class TestPushshiftAPIMinimal(TestCase):
         mock_get.return_value.raise_for_status.assert_called_once()
 
     @mock.patch("pushshift_py.PushshiftAPIMinimal._impose_rate_limit")
-    @mock.patch("pushshift_py.src.pushshift_api_minimal.requests.get")
+    @mock.patch("pushshift_py.pushshift_api_minimal.requests.get")
     def test_get_429(self, mock_get, mock_rate_limit):
         max_retries = 7
         expected_result = "test_text"
@@ -411,7 +411,7 @@ class TestPushshiftAPIMinimal(TestCase):
         mock_get.return_value.raise_for_status.assert_not_called()
 
     @mock.patch("pushshift_py.PushshiftAPIMinimal._impose_rate_limit")
-    @mock.patch("pushshift_py.src.pushshift_api_minimal.requests.get")
+    @mock.patch("pushshift_py.pushshift_api_minimal.requests.get")
     def test_get_raise_for_status(self, mock_get, mock_rate_limit):
         max_retries = 7
         expected_result = "test_text"

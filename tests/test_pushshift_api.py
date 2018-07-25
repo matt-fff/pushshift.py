@@ -1,5 +1,5 @@
 from unittest import mock
-from pushshift_py.tests.test_pushshift_api_minimal import TestPushshiftAPIMinimal
+from tests.test_pushshift_api_minimal import TestPushshiftAPIMinimal
 from pushshift_py import PushshiftAPI
 
 # pylint: disable=too-many-public-methods

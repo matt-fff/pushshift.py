@@ -1,6 +1,6 @@
 PROJECT_NAME=pushshift.py
-SRC_PATH=pushshift_py/src
-TESTS_PATH=pushshift_py/tests
+SRC_PATH=pushshift_py/
+TESTS_PATH=tests/
 
 define msg
     @printf "\033[36m# %s\033[0m\n" $(1)
