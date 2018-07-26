@@ -37,6 +37,13 @@ create-venv:
 	echo "$(shell pwd)/$(SRC_PATH)" > venv/lib/python3.6/site-packages/$(PROJECT_NAME).pth
 	echo "$(shell pwd)/$(TESTS_PATH)" > venv/lib/python3.6/site-packages/test-$(PROJECT_NAME).pth
 
+test-publish:
+	$(call msg,"Test publishing to PyPI")
+	rm dist/*.whl | true
+	rm dist/*.tar.gz | true
+	python setup.py sdist bdist_wheel
+	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
 publish:
 	$(call msg,"Publishing to PyPI")
 	rm dist/*.whl | true
