@@ -20,7 +20,7 @@ pytest==3.6.2
 pytest-cov==2.5.1
 pytz==2018.4
 requests==2.19.1
-requests-toolbelt==0.8.0
+requests-toolbelt==0.9.1
 six==1.11.0
 toml==0.9.4
 tqdm==4.23.4
