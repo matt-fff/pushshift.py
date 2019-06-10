@@ -3,8 +3,11 @@ Python Pushshift.io API Wrapper (for comment/submission search)
 .. image:: https://img.shields.io/badge/license-BSD--2-blue.svg
    :target: https://github.com/typenil/pushshift.py/blob/master/LICENSE
    :alt: License
-.. image:: https://travis-ci.org/typenil/psaw.svg?branch=master
-   :target: https://travis-ci.org/typenil/psaw
+.. image:: https://api.dependabot.com/badges/status?host=github&repo=typenil/pushshift.py
+   :target: https://dependabot.com
+   :alt: Dependabot Status
+.. image:: https://travis-ci.org/typenil/pushshift.py.svg?branch=master
+   :target: https://travis-ci.org/typenil/pushshift.py
    :alt: Build
 .. image:: https://api.codeclimate.com/v1/badges/0ec8ed5374c3131a1459/maintainability
    :target: https://codeclimate.com/github/typenil/psaw/maintainability
