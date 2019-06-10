@@ -9,11 +9,11 @@ Python Pushshift.io API Wrapper (for comment/submission search)
 .. image:: https://travis-ci.org/typenil/pushshift.py.svg?branch=master
    :target: https://travis-ci.org/typenil/pushshift.py
    :alt: Build
-.. image:: https://api.codeclimate.com/v1/badges/0ec8ed5374c3131a1459/maintainability
-   :target: https://codeclimate.com/github/typenil/psaw/maintainability
+.. image:: https://api.codeclimate.com/v1/badges/6f6eb6ffd22841935b83/maintainability
+   :target: https://codeclimate.com/github/typenil/pushshift.py/maintainability
    :alt: Maintainability
-.. image:: https://api.codeclimate.com/v1/badges/0ec8ed5374c3131a1459/test_coverage
-   :target: https://codeclimate.com/github/typenil/psaw/test_coverage
+.. image:: https://api.codeclimate.com/v1/badges/6f6eb6ffd22841935b83/test_coverage
+   :target: https://codeclimate.com/github/typenil/pushshift.py/test_coverage
    :alt: Test Coverage
 
 
