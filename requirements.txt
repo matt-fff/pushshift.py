@@ -16,7 +16,7 @@ pkginfo==1.4.2
 pluggy==0.6.0
 py==1.8.0
 pylint==1.9.2
-pytest==3.6.2
+pytest==4.6.2
 pytest-cov==2.7.1
 pytz==2019.1
 requests==2.20.0
