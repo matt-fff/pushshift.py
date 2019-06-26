@@ -33,9 +33,9 @@ travis-coverage:
 create-venv:
 	$(call msg,"Creating a virtualenv for this project")
 	virtualenv venv
-	venv/bin/pip install -r requirements.txt
-	echo "$(shell pwd)/$(SRC_PATH)" > venv/lib/python3.6/site-packages/$(PROJECT_NAME).pth
-	echo "$(shell pwd)/$(TESTS_PATH)" > venv/lib/python3.6/site-packages/test-$(PROJECT_NAME).pth
+	venv/bin/pip3.7 install -r requirements.txt
+	echo "$(shell pwd)/$(SRC_PATH)" > venv/lib/python3.7/site-packages/$(PROJECT_NAME).pth
+	echo "$(shell pwd)/$(TESTS_PATH)" > venv/lib/python3.7/site-packages/test-$(PROJECT_NAME).pth
 
 test-publish:
 	$(call msg,"Test publishing to PyPI")

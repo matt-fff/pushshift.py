@@ -6,7 +6,7 @@ import requests
 from .rate_limit_cache import RateLimitCache
 
 # pylint: disable=too-many-instance-attributes
-class PushshiftAPIMinimal(object):
+class PushshiftAPIMinimal:
     # base_url = {'search':'https://api.pushshift.io/reddit/{}/search/',
     #            'meta':'https://api.pushshift.io/meta/'}
     _base_url = "https://{domain}.pushshift.io/{{endpoint}}"

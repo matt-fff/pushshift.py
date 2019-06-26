@@ -2,7 +2,7 @@ from collections import deque
 import time
 
 
-class RateLimitCache(object):
+class RateLimitCache:
     def __init__(self, max_storage, interval_secs=60):
         self.max_storage = max_storage
         self.interval_secs = interval_secs
