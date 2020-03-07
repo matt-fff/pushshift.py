@@ -7,4 +7,4 @@ https://github.com/typenil/pushshift.py
 from pushshift_py.pushshift_api import PushshiftAPI
 from pushshift_py.pushshift_api_minimal import PushshiftAPIMinimal
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
