@@ -1,5 +1,6 @@
 from os import path
 import re
+import os
 from setuptools import setup
 
 PACKAGE_NAME = "pushshift.py"
@@ -9,13 +10,14 @@ HERE = path.abspath(path.dirname(__file__))
 with open(path.join(HERE, "README.rst"), encoding="utf-8") as fp:
     README = fp.read()
 
-with open(path.join(HERE, PACKAGE_PATH, "__init__.py"), encoding="utf-8") as fp:
-    VERSION = re.search('__version__ = "([^"]+)"', fp.read()).group(1)
+LAST_PYPI_VERSION = os.environ["LAST_PYPI_VERSION"]
+PATCH_NUM = re.search('[0-9]+$', LAST_PYPI_VERSION).group(0)
+PYPI_VERSION = f"{LAST_PYPI_VERSION[:-len(PATCH_NUM)]}{int(PATCH_NUM) + 1}"
 
 setup(
     name=PACKAGE_NAME,
     packages=[PACKAGE_PATH],
-    version=VERSION,
+    version=PYPI_VERSION,
     long_description=README,
     description="Pushshift.io API Wrapper for reddit.com search endpoints",
     author="David Marx (original), typenil (fork)",
