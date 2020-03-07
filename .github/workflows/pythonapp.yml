@@ -32,4 +32,4 @@ jobs:
         find pushshift_py/ tests/ -iname "*.py" | xargs pylint --disable=fixme
     - name: Test with pytest
       run: |
-        python -m pytest tests/
+        python -m pytest --cov=pushshift_py/ tests/
